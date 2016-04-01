@@ -24,7 +24,7 @@ class Footer extends Component {
       <div className='Footer'>
         <div className='contributors'>
           {contributors.map((contributor, key) =>
-            <a href={contributor.link} key={key}>
+            <a href={contributor.link} target='_blank' key={key}>
               <img src={contributor.img} className={key % 2 ? 'small' : 'big'} />
             </a>
           )}
