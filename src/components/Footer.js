@@ -32,10 +32,10 @@ class Footer extends Component {
         <div className='team'>
           <p className='title'>Be part of the<span className='bold'> Crew</span></p>
           <span className='desc'>The more, the merrier, agreed? Then join the party and help us make the mjml app even better!</span>
-          <Button href='#' className='button'>
+          <a className='Button flat' target='_blank' href='https://github.com/mjmlio/mjml-app'>
             <i className='ion-social-github' />
             <span>Join the community</span>
-          </Button>
+          </a>
         </div>
         <div className='bottom-bar'>
         </div>
