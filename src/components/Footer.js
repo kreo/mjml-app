@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import 'styles/Footer.scss'
-import Button from 'components/Button'
 
 const contributors = [
   { img: require('../assets/meriadec.png'), link: 'https://github.com/meriadec' },
