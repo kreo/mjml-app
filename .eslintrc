@@ -1,0 +1,12 @@
+{
+  "extends": ["zavatta", "zavatta-react"],
+  "rules": {
+    "no-multi-str": 0
+  },
+  "globals": {
+    "Promise": false,
+    "Back": false,
+    "TimelineMax": false,
+    "TweenMax": false
+  }
+}
