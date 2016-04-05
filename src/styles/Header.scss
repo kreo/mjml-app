@@ -2,9 +2,10 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 100px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   transition: height 150ms ease-in-out;
   backdrop-filter: blur(3px);
+  border: 1px solid transparent;
   z-index: 2;
 
   > .container {

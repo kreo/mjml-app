@@ -6,6 +6,7 @@ const loadImage = src => new Promise(resolve => {
 })
 
 export default () => Promise.all([
+  //require('assets/logo.svg'),
   require('assets/slides/1-browse.png'),
   require('assets/slides/2-manage.png'),
   require('assets/slides/3-edit.png'),

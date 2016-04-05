@@ -22,7 +22,6 @@ img {
 .container {
   max-width: 1220px;
   min-width: 300px;
-  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -30,6 +29,7 @@ img {
   z-index: 4;
 
   &:hover {
+    
     .octo-banner {
       fill: #f45e43;
     }

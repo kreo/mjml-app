@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Hero from 'components/Hero'
+import YoloSlide from 'components/YoloSlide'
 import Features from 'components/Features'
 import GithubCorner from 'react-github-corner'
 

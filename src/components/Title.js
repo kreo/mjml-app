@@ -11,11 +11,6 @@ class Title extends Component {
     index: 0
   }
 
-  componentDidMount () {
-    new TimelineMax()
-      .from(this.refs.switch, 1, { opacity: 0 })
-  }
-
   change = () => {
     const { switches } = this.props
     const { index } = this.state
@@ -26,6 +21,11 @@ class Title extends Component {
     this.setState({ index: (index === switches.length - 1 ? 0 : index + 1) })
   }
 
+  componentDidMount () {
+    new TimelineMax()
+      .from(this.refs.switch, 1, { opacity: 0 })
+  }
+
   render () {
 
     const { switches } = this.props
@@ -33,13 +33,12 @@ class Title extends Component {
 
     return (
       <div className='Title'>
-        <span>
-          The only app that makes <br /> responsive email
-        </span>
+        <h1 className='heading'>mjml app. html email editor</h1>
+        <span>The only app that makes <br />responsive email</span>
         <span className='switch' ref='switch'>
             {switches[index]}
         </span>
-        <ReactInterval timeout={2000} enabled callback={this.change} />
+        <ReactInterval timeout={2000} enabled={true} callback={this.change} />
       </div>
     )
   }

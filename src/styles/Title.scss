@@ -1,12 +1,19 @@
 
 .Title {
 
+  .heading {
+    color: #E7585C;
+    font-weight: bolder;
+    font-size: 0.9em;
+    text-transform: uppercase;
+  }
+
   span {
     line-height: 40px;
     color: #222222;
     font-size: 30px;
     font-weight: 200;
-    margin: 0 3px;
+    margin: 0;
 
     &.switch {
       font-weight: 700;

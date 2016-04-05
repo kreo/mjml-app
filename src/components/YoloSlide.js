@@ -1,10 +1,7 @@
-
 import React, { Component } from 'react'
-import ReactInterval from 'react-interval'
+import { findDOMNode } from 'react-dom'
 
-import Feature from 'components/Feature'
-
-import 'styles/Features.scss'
+import 'styles/YoloSlide.scss'
 
 const steps = [
   {
@@ -40,57 +37,82 @@ const steps = [
     img: require('assets/slides/5-send.png'),
     desc: 'The live preview is pretty cool, but we also provided a way to \
       directly send tests to your inbox to visualize the final email on your \
-      phone, desktop client or browser client. You will need a Mailjet \
+      phone, desktop client or browser client.<br />You will need a Mailjet \
       account, with your API Keys (<link>), and an valid email address to be \
       used as a sender, and recipient.'
   },
 ]
 
-class Features extends Component {
+class YoloSlide extends Component {
 
-  state = {
-   step: 0,
-   automatic: true,
+  constructor (props) {
+    super(props)
+
+    this._fixed = false
   }
 
-  switchStep (index) {
-    this.setState({ step: index, automatic: false })
-    window.setTimeout(() => this.setState({ ...this.state, automatic: true }), 10000)
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleScroll)
   }
 
-  nextSlide = () => {
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleScroll)
+  }
 
-    const { step, automatic } = this.state
+  handleScroll = (e) => {
+    const node = findDOMNode(this)
+    const img = this.refs.img
 
-    if (automatic) {
-      this.setState({ ...this.state, step: step === steps.length - 1 ? 0 : step + 1 })
+    const imgRect = img.getBoundingClientRect()
+    const rect = node.getBoundingClientRect()
+
+    const shouldBeFixed = rect.top <= 0 && window.scrollY < rect.height
+
+    if (shouldBeFixed && !this._fixed) {
+      this._fixed = true
+      TweenMax.set(this.refs.img, {
+        position: 'fixed',
+        top: imgRect.top,
+        left: imgRect.left,
+        width: imgRect.width
+      })
+    } else if (!shouldBeFixed && this._fixed) {
+      this._fixed = false
+      TweenMax.set(this.refs.img, { position: 'static' })
     }
   }
 
   render () {
-
-    const step = steps[this.state.step]
-    const next = steps[this.state.step + 1]
-
     return (
-      <div className='Features'>
+      <div className='YoloSlide'>
         <div className='container'>
-         <div className='switcher'>
-           <ul>
-             {steps.map((s, i) => {
-                return (
-                  <li key={i} onClick={() => this.switchStep(i)} className={(this.state.step === i ? 'active' : '')} >
-                    <i className={'ion-record'} />
-                  </li>)
-             })}
-           </ul>
-         </div>
-         <Feature content={step} next={next} onNext={this.nextSlide} />
+
+          <div className='YoloSlide-items-container'>
+
+            {steps.map((step, i) => (
+              <div className='YoloSlide-item' key={i}>
+                <h3>
+                  {step.title}
+                </h3>
+                <section>
+                  {step.desc}
+                </section>
+              </div>
+            ))}
+
+          </div>
+
+          <div className='YoloSlide-img'>
+            <img ref='img' src={`${steps[0].img}`} />
+          </div>
+
         </div>
-        <ReactInterval timeout={6000} enabled={true} callback={this.nextSlide} />
       </div>
     )
   }
+
 }
 
-export default Features
+export default YoloSlide
