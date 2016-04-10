@@ -11,24 +11,20 @@ const OSX = { name: 'OS X', link: 'https://github.com/mjmlio/mjml-app/releases' 
 
 class Hero extends Component {
 
-  state = {
-    platform: false,
-    os: 'OS X'
-  }
+  constructor (props) {
+    super(props)
 
-  componentWillMount () {
-    let os;
-    if (navigator.appVersion.indexOf("Win") != -1) {
-      os = [ WINDOWS, LINUX, OSX ]
-    }
-    if (navigator.appVersion.indexOf("Mac") != -1) {
-      os = [ OSX, WINDOWS, LINUX ]
-    }
-    else {
-      os = [ LINUX, WINDOWS, OSX ]
+    let os
+
+    if (navigator.appVersion.indexOf('Win') !== -1) {
+      os = [WINDOWS, LINUX, OSX]
+    } else if (navigator.appVersion.indexOf('Mac') !== -1) {
+      os = [OSX, WINDOWS, LINUX]
+    } else {
+      os = [LINUX, WINDOWS, OSX]
     }
 
-    this.setState({ ...this.state, os })
+    this.state = { platform: false, os }
   }
 
   componentDidMount () {
@@ -39,7 +35,7 @@ class Hero extends Component {
 
   togglePlatform = () => {
     const { platform } = this.state
-    this.setState({ ...this.state, platform: !platform })
+    this.setState({ platform: !platform })
   }
 
   render () {
@@ -50,7 +46,7 @@ class Hero extends Component {
     return (
       <div className='Hero container'>
         <div className='Hero-left' ref='desc'>
-          <Title switches={[ 'easy', 'fun', 'painless', 'beautiful', 'effortless', 'smooth' ]} />
+          <Title switches={['easy', 'fun', 'painless', 'beautiful', 'effortless', 'smooth']} />
           <p>
             You can now leverage the power of mjml directly from its first desktop app. Import and manage templates, edit your email with live rendering, customize your environment and send tests straight from the app!
           </p>
@@ -59,14 +55,15 @@ class Hero extends Component {
             <span>Download for {os.name}</span>
           </Button>
 
-          {this.state.platform &&
-          <div className='others'>
-            <ul>
-              {rest.map((os, key) =>
-                <li key={key}><a href={os.link}>{os.name}</a></li>
-              )}
-            </ul>
-          </div>}
+          {this.state.platform && (
+            <div className='others'>
+              <ul>
+                {rest.map((os, key) =>
+                  <li key={key}><a href={os.link}>{os.name}</a></li>
+                )}
+              </ul>
+            </div>
+          )}
 
           <p className='other-platforms'>
             Looking for <span className='underlined' href='#' onClick={this.togglePlatform}>other platforms?</span>
