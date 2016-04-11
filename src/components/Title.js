@@ -33,6 +33,7 @@ class Title extends Component {
 
     return (
       <div className='Title'>
+        <h1 style={{ color: 'transparent' }}>mjml app. Html email editor</h1>
         <span>
           The only app that makes <br /> responsive email
         </span>

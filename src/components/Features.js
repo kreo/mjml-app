@@ -31,8 +31,8 @@ const steps = [
   {
     title: 'Customize your environment',
     img: require('assets/slides/4-customize.png'),
-    desc: 'As a developer, I like my environment to looks the way I want. \
-      Using the Ace editor allows you to selects a theme from all Ace themes \
+    desc: 'As a developer, I like my environment to look the way I want. \
+      The Ace editor allows you to select a theme from all Ace themes \
       library available in the Settings button on the top left corner.'
   },
   {
