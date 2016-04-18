@@ -36,11 +36,11 @@ class Header extends Component {
       <div className={cx('Header', { compact })}>
         <div className='container'>
           <div className='Header-left'>
-            <a href='/'><img src={require('../assets/logo.svg')} /></a>
+            <a href='http://mjmlio.github.io/mjml-app/'><img src={require('../assets/logo.svg')} /></a>
           </div>
           <div className='Header-right'>
-            <a href='#'>About</a>
-            <a href='#'>Documentation</a>
+            <a href='https://mjml.io/about'>About</a>
+            <a href='https://mjml.io/documentation/'>Documentation</a>
             <Button className='download' href='#'>Download</Button>
           </div>
         </div>

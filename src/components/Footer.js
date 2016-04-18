@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import 'styles/Footer.scss'
-import Button from 'components/Button'
 
 const contributors = [
   { img: require('../assets/meriadec.png'), link: 'https://github.com/meriadec' },
@@ -14,7 +13,7 @@ const contributors = [
   { img: 'https://avatars0.githubusercontent.com/u/116530?v=3&s=460', link: 'https://github.com/robink' },
   { img: require('../assets/arnaud.png'), link: 'https://github.com/arnaudbreton' },
   { img: require('../assets/remi.png'), link: 'https://github.com/hteumeuleu' },
-  { img: require('../assets/mat.png'), link: 'https://github.com/swibge' },
+  { img: require('../assets/mat.png'), link: 'https://github.com/swibge' }
 ]
 
 class Footer extends Component {
@@ -24,7 +23,7 @@ class Footer extends Component {
       <div className='Footer'>
         <div className='contributors'>
           {contributors.map((contributor, key) =>
-            <a href={contributor.link} key={key}>
+            <a href={contributor.link} target='_blank' key={key}>
               <img src={contributor.img} className={key % 2 ? 'small' : 'big'} />
             </a>
           )}
@@ -32,10 +31,10 @@ class Footer extends Component {
         <div className='team'>
           <p className='title'>Be part of the<span className='bold'> Crew</span></p>
           <span className='desc'>The more, the merrier, agreed? Then join the party and help us make the mjml app even better!</span>
-          <Button href='#' className='button'>
+          <a className='Button flat' target='_blank' href='https://github.com/mjmlio/mjml-app'>
             <i className='ion-social-github' />
             <span>Join the community</span>
-          </Button>
+          </a>
         </div>
         <div className='bottom-bar'>
         </div>

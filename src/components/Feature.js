@@ -6,9 +6,8 @@ import 'styles/Feature.scss'
 class Feature extends Component {
 
   render () {
+    const { content, onNext } = this.props
 
-    const { content, next, onNext } = this.props
-  
     return (
       <div className='Features-item'>
         <div className='Feature-description'>

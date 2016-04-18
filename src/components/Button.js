@@ -1,4 +1,4 @@
-
+import cx from 'classnames'
 import React, { Component } from 'react'
 
 import 'styles/Button.scss'
@@ -6,10 +6,8 @@ import 'styles/Button.scss'
 class Button extends Component {
 
   render () {
-
     const { children, href, className } = this.props
-
-    const cl = `Button${className ? ' ' + className : ''}`
+    const cl = cx('Button', className)
 
     return (
       <a href={href} className={cl}>

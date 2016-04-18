@@ -31,8 +31,8 @@ const steps = [
   {
     title: 'Customize your environment',
     img: require('assets/slides/4-customize.png'),
-    desc: 'As a developer, I like my environment to looks the way I want. \
-      Using the Ace editor allows you to selects a theme from all Ace themes \
+    desc: 'As a developer, I like my environment to look the way I want. \
+      The Ace editor allows you to select a theme from all Ace themes \
       library available in the Settings button on the top left corner.'
   },
   {
@@ -43,19 +43,19 @@ const steps = [
       phone, desktop client or browser client. You will need a Mailjet \
       account, with your API Keys (<link>), and an valid email address to be \
       used as a sender, and recipient.'
-  },
+  }
 ]
 
 class Features extends Component {
 
   state = {
-   step: 0,
-   automatic: true,
+    step: 0,
+    automatic: true
   }
 
   switchStep (index) {
     this.setState({ step: index, automatic: false })
-    window.setTimeout(() => this.setState({ ...this.state, automatic: true }), 10000)
+    window.setTimeout(() => this.setState({ automatic: true }), 10000)
   }
 
   nextSlide = () => {
@@ -63,7 +63,7 @@ class Features extends Component {
     const { step, automatic } = this.state
 
     if (automatic) {
-      this.setState({ ...this.state, step: step === steps.length - 1 ? 0 : step + 1 })
+      this.setState({ step: step === steps.length - 1 ? 0 : step + 1 })
     }
   }
 
@@ -77,17 +77,16 @@ class Features extends Component {
         <div className='container'>
          <div className='switcher'>
            <ul>
-             {steps.map((s, i) => {
-                return (
-                  <li key={i} onClick={() => this.switchStep(i)} className={(this.state.step === i ? 'active' : '')} >
-                    <i className={'ion-record'} />
-                  </li>)
-             })}
+             {steps.map((s, i) => (
+               <li key={i} onClick={() => this.switchStep(i)} className={(this.state.step === i ? 'active' : '')} >
+                 <i className={'ion-record'} />
+               </li>
+             ))}
            </ul>
          </div>
          <Feature content={step} next={next} onNext={this.nextSlide} />
         </div>
-        <ReactInterval timeout={6000} enabled={true} callback={this.nextSlide} />
+        <ReactInterval timeout={6000} enabled callback={this.nextSlide} />
       </div>
     )
   }
