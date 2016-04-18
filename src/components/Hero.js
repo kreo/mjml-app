@@ -5,9 +5,9 @@ import Button from 'components/Button'
 
 import 'styles/Hero.scss'
 
-const WINDOWS = { name: 'Windows', link: 'https://github.com/mjmlio/mjml-app/releases' }
-const LINUX = { name: 'Linux', link: 'https://github.com/mjmlio/mjml-app/releases' }
-const OSX = { name: 'OS X', link: 'https://github.com/mjmlio/mjml-app/releases' }
+const WINDOWS = { name: 'Windows', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-win32-x64.zip' }
+const LINUX = { name: 'Linux', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.1/mjml-app-linux-x64.zip' }
+const OSX = { name: 'OS X', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-osx.dmg' }
 
 class Hero extends Component {
 

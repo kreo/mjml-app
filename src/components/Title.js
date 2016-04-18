@@ -34,7 +34,7 @@ class Title extends Component {
     return (
       <div className='Title'>
         <h1 className='heading'>mjml app. html email editor</h1>
-        <span>The only app that makes <br />responsive email</span>
+        <span>The only app that makes <br />responsive email </span>
         <span className='switch' ref='switch'>
             {switches[index]}
         </span>
