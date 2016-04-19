@@ -1,11 +1,12 @@
 
 .Features-item {
 
+  width: 100%;
   display: flex;
   overflow: hidden;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
 
   @media screen and (max-width: 1000px) {
     flex-direction: column-reverse;
@@ -14,9 +15,7 @@
   }
 
   .image {
-    @media screen and (max-width: 900px) {
-      max-width: 90vw;
-    }
+    max-width: 70%;
   }
 }
 
