@@ -38,7 +38,6 @@ const OSX = {
       event: 'mjml-app',
       button: 'osx',
     })
-    alert(dataLayer)
   },
 }
 
