@@ -5,9 +5,9 @@ import Button from 'components/Button'
 
 import 'styles/Hero.scss'
 
-const WINDOWS = { name: 'Windows', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-win32-x64.zip' }
-const LINUX = { name: 'Linux', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.1/mjml-app-linux-x64.zip' }
-const OSX = { name: 'OS X', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-osx.dmg' }
+const WINDOWS = { name: 'Windows', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-win32-x64.zip', gtm: 'dataLayer.push({"eventValue": "mjmlApp-Downloaded", "event": "mjml-app", "button", "windows"});' }
+const LINUX = { name: 'Linux', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.1/mjml-app-linux-x64.zip', gtm: 'dataLayer.push({"eventValue": "mjmlApp-Downloaded", "event": "mjml-app", "button", "linux"});' }
+const OSX = { name: 'OS X', link: 'https://github.com/mjmlio/mjml-app/releases/download/1.1.2/mjml-app-osx.dmg', gtm: 'dataLayer.push({"eventValue": "mjmlApp-Downloaded", "event": "mjml-app", "button", "osx"});' }
 
 class Hero extends Component {
 
@@ -50,7 +50,7 @@ class Hero extends Component {
           <p>
             You can now leverage the power of mjml directly from its first desktop app. Import and manage templates, edit your email with live rendering, customize your environment and send tests straight from the app!
           </p>
-          <Button href={os.link} className='button-icon'>
+          <Button href={os.link} className='button-icon' onclick={os.gtm}>
             <i className='ion-arrow-down-a'/>
             <span>Download for {os.name}</span>
           </Button>
@@ -59,7 +59,7 @@ class Hero extends Component {
             <div className='others'>
               <ul>
                 {rest.map((os, key) =>
-                  <li key={key}><a href={os.link}>{os.name}</a></li>
+                  <li key={key}><a href={os.link} onclick={os.gtm}>{os.name}</a></li>
                 )}
               </ul>
             </div>
