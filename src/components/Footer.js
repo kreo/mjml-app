@@ -37,6 +37,7 @@ class Footer extends Component {
           </a>
         </div>
         <div className='bottom-bar'>
+          <a target='_blank' href='http://mjml.io'><img src='https://mjml.io/assets/img/logo-footer.png' /></a>
         </div>
       </div>
     )
