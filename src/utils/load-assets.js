@@ -10,5 +10,5 @@ export default () => Promise.all([
   require('assets/slides/2-manage.png'),
   require('assets/slides/3-edit.png'),
   require('assets/slides/4-customize.png'),
-  require('assets/slides/5-send.png')
+  require('assets/slides/5-send.png'),
 ].map(loadImage))
