@@ -41,7 +41,7 @@ class Header extends Component {
           <div className='Header-right'>
             <a target='_blank' href='https://mjml.io/about'>About</a>
             <a target='_blank' href='https://mjml.io/documentation/'>Documentation</a>
-            <Button className='download' href='#'>Download</Button>
+            <Button className='download' href='https://github.com/mjmlio/mjml-app/releases'>Download</Button>
           </div>
         </div>
       </div>
