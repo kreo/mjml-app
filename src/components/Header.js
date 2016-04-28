@@ -8,7 +8,7 @@ import 'styles/Header.scss'
 class Header extends Component {
 
   state = {
-    compact: false
+    compact: false,
   }
 
   componentDidMount () {

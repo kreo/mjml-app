@@ -8,7 +8,7 @@ import 'styles/Title.scss'
 class Title extends Component {
 
   state = {
-    index: 0
+    index: 0,
   }
 
   componentDidMount () {
