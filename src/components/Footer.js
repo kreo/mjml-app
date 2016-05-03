@@ -31,7 +31,7 @@ class Footer extends Component {
         <div className='team'>
           <p className='title'>Be part of the<span className='bold'> Crew</span></p>
           <span className='desc'>The more, the merrier, agreed? Then join the party and help us make the mjml app even better!</span>
-          <a className='Button flat' target='_blank' href='http://mjml.io/slack'>
+          <a className='Button flat' target='_blank' href='https://mjml.io/slack'>
             <i className='ion-pound' />
             <span>Join the community on Slack</span>
           </a>
