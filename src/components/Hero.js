@@ -103,7 +103,7 @@ class Hero extends Component {
 
         </div>
         <div className='Hero-right' ref='img'>
-          <img src={require('../assets/preview.png')} />
+          <img src={require('../assets/preview.jpg')} />
         </div>
       </div>
     )
