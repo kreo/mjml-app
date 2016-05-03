@@ -12,7 +12,7 @@ const steps = [
     img: require('assets/slides/1-browse.png'),
     desc: 'The presets section will provide a selection of the best community \
       templates using MJML. If you want your template to appear in this \
-      section, please submit a pull request at <link>!',
+      section, please submit a pull request', 
   },
   {
     title: 'Manage your templates',
@@ -41,7 +41,7 @@ const steps = [
     desc: 'The live preview is pretty cool, but we also provided a way to \
       directly send tests to your inbox to visualize the final email on your \
       phone, desktop client or browser client. You will need a Mailjet \
-      account, with your API Keys (<link>), and an valid email address to be \
+      account, with your API Keys, and an valid email address to be \
       used as a sender, and recipient.',
   },
 ]
