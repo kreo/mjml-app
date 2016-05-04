@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 
-import Button from 'components/Button'
-
 import 'styles/Header.scss'
 
 class Header extends Component {

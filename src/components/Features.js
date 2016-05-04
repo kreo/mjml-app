@@ -12,7 +12,7 @@ const steps = [
     img: require('assets/slides/1-browse.png'),
     desc: 'The presets section will provide a selection of the best community \
       templates using MJML. If you want your template to appear in this \
-      section, please submit a pull request', 
+      section, please submit a pull request',
   },
   {
     title: 'Manage your templates',
