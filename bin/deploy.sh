@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 git checkout gh-pages &&
-  find . -maxdepth 1 -not -name node_modules -not -name '.*' | xargs rm -rf &&
+  find . -maxdepth 1 -not -name node_modules -not -name 'favicon.ico' -not -name '.*' | xargs rm -rf &&
   cp -r .dist/* . &&
   git add . &&
   git commit -m 'deploy' &&
