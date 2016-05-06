@@ -22,7 +22,7 @@ const steps = [
       edit them with a pretty cool live reload!',
   },
   {
-    title: 'Edit you email using a customizable editor',
+    title: 'Edit your email using a customizable editor',
     img: require('assets/slides/3-edit.png'),
     desc: 'When focused on the editor, you can toggle a live preview by \
       hitting ‘Cmd+p’ (or click the preview button on the top left corner) \
