@@ -27,14 +27,21 @@ class SideBar extends Component {
           to='/browse/templates'
           activeClassName='active'
           className='SideBar-section'>
-          {'My Templates'}
+          {'Templates'}
+        </Link>
+
+        <Link
+          to='/browse/components'
+          activeClassName='active'
+          className='SideBar-section'>
+          {'Components'}
         </Link>
 
         <Link
           to='/browse/presets'
           activeClassName='active'
           className='SideBar-section'>
-          {'Gallery'}
+          {'Presets'}
         </Link>
 
         <div className='Sidebar-divider' />
