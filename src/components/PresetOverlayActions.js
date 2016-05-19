@@ -15,7 +15,7 @@ class TemplateOverlayActions extends Component {
     const { item } = this.props
 
     this.setState({ loading: true })
-    setTimeout(() => this.props.dispatch(usePreset(item)))
+    this.props.dispatch(usePreset(item))
   }
 
   render () {

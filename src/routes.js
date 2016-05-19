@@ -10,6 +10,7 @@ import ComingSoon from './components/ComingSoon'
 // browse page
 import BrowseTemplates from './components/browse/Templates'
 import BrowsePresets from './components/browse/Presets'
+import BrowseComponents from './components/browse/Components'
 
 export default (
   <Route component={App}>
@@ -19,7 +20,7 @@ export default (
     <Route path='browse' component={HomePage}>
       <Route path='templates' component={BrowseTemplates} />
       <Route path='presets' component={BrowsePresets} />
-      <Route path='components' component={ComingSoon} />
+      <Route path='components' component={BrowseComponents} />
     </Route>
 
     <Route path='editor' component={EditorPage} />

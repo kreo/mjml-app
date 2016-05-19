@@ -9,8 +9,9 @@ const dataFolder = process.env.NODE_ENV === 'development'
   ? remote.app.getAppPath()
   : remote.app.getPath('home')
 
-export const projectFolder = path.join(dataFolder, 'mjml-app', 'MJML-Projects')
-export const thumbnailsFolder = path.join(dataFolder, 'mjml-app', 'MJML-thumbnails')
+export const projectFolder = path.join(dataFolder, 'mjml-app', 'projects')
+export const componentsFolder = path.join(dataFolder, 'mjml-app', 'components')
+export const thumbnailsFolder = path.join(dataFolder, 'mjml-app', 'thumbnails')
 
 /**
  * Turns a callback style function into a function that returns a promise
@@ -32,6 +33,7 @@ const promisify = fn =>
 export const checkAndCreateAppFolders = () =>
   Promise.all([
     checkOrCreate(projectFolder),
+    checkOrCreate(componentsFolder),
     checkOrCreate(thumbnailsFolder),
   ])
 
