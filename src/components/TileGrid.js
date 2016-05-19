@@ -12,7 +12,12 @@ class TileGrid extends Component {
   }
 
   render () {
-    const { items, overlayActions, canEditName } = this.props
+    const {
+      items,
+      overlayActions,
+      canEditName,
+      noThumbnail,
+    } = this.props
 
     return (
       <div className='TileGrid'>
@@ -21,6 +26,7 @@ class TileGrid extends Component {
             {items.map(item =>
               <Tile
                 canEditName={canEditName}
+                noThumbnail={noThumbnail}
                 item={item}
                 overlayActions={overlayActions}
                 key={item.get('id')}/>)}

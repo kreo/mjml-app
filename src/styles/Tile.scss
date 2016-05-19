@@ -13,7 +13,6 @@
   }
 
   .template-info {
-    cursor: pointer;
     color: #cecece;
     font-size: 13px;
     bottom: 4px;
@@ -24,6 +23,10 @@
     overflow: hidden;
     text-align: center;
     transition: 100ms ease-out background;
+
+    &.editable {
+      cursor: pointer;
+    }
 
     &.hover {
       background: rgba(255, 255, 255, 0.1);
@@ -48,4 +51,15 @@
       transition: all 0.15s ease-in-out;
     }
   }
+}
+
+.Tile-placeholder {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.3);
 }

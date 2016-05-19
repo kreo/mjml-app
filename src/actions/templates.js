@@ -123,7 +123,7 @@ export const updateCurrentTemplate = updater => (dispatch, getState) => {
 export const saveTemplateWithId = id => (dispatch, getState) => {
 
   const state = getState()
-  const { templates, config } = state
+  const { templates } = state
 
   const list = templates.get('list')
   const template = list.get(list.findIndex(
@@ -133,7 +133,7 @@ export const saveTemplateWithId = id => (dispatch, getState) => {
   const cleaned = template
     .delete('thumbnailLoading')
 
-  save(cleaned, config.get('projectDirectory'))
+  save(cleaned)
 }
 
 /**

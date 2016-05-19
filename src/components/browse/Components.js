@@ -26,6 +26,7 @@ class ComponentsList extends Component {
         {!!components.size
           ? <TileGrid
             canEditName
+            noThumbnail
             overlayActions={ComponentOverlayActions}
             items={components} />
           : (
