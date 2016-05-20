@@ -67,7 +67,7 @@ class Tile extends Component {
     const shouldShowOverlay = this.state.overlay || this.state.overlayCaptured
 
     return (
-      <div className='template'>
+      <div className='template' onMouseLeave={this.hideOverlay}>
         <Overlay
           onMouseLeave={this.hideOverlay}
           item={item}
