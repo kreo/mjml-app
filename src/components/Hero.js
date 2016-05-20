@@ -7,7 +7,7 @@ import 'styles/Hero.scss'
 
 const WINDOWS = {
   name: 'Windows',
-  link: 'https://github.com/mjmlio/mjml-app/releases/download/1.2.0/mjml-app-win32-x64.zip',
+  link: 'https://github.com/mjmlio/mjml-app/releases/download/1.3.0/mjml-app-win32-x64.zip',
   gtm () {
     dataLayer.push({
       eventValue: 'mjmlApp-Downloaded',
@@ -31,7 +31,7 @@ const LINUX = {
 
 const OSX = {
   name: 'OS X',
-  link: 'https://github.com/mjmlio/mjml-app/releases/download/1.2.0/mjml-app-osx.dmg',
+  link: 'https://github.com/mjmlio/mjml-app/releases/download/1.3.0/mjml-app-osx.dmg',
   gtm () {
     dataLayer.push({
       eventValue: 'mjmlApp-Downloaded',
